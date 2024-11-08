@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Container -->
+    <div class="login-container" id="loginContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <br>
+            <input type="password" id="password" placeholder="Password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container" id="dashboardContainer" style="display: none;">
+        <h1 class="dashboard-title">Dashboard</h1>
+        <h2 class="welcome-message">Welcome, <span id="usernameDisplay">User</span></h2>
+
+        <button id="fetchButton">Fetch Top 10 GitHub Users</button>
+        <select id="sortOptions">
+            <option value="default">Default</option>
+            <option value="sortAsc">Sort Ascending</option>
+            <option value="sortDesc">Sort Descending</option>
+        </select>
+
+        <ul id="userList">
+            <!-- GitHub usernames will be populated here -->
+        </ul>
+
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
